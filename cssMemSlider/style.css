@@ -8,7 +8,7 @@
 }
 
 body {
-  background-image: url("assets/images/bcg-my-pictures.jpg");
+  background: url("assets/images/bcg-my-pictures.jpg");
   height: 96vmin;
 }
 
@@ -66,28 +66,15 @@ body {
   position: absolute;
 }
 
-.wrapper label.control {
-  cursor: pointer;
-  display: inline-block;
-  height: 8px;
-  margin: 25px 12px 0 16px;
-  position: relative;
-  width: 8px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-}
-
 .wrapper label.control:after {
-  border: 2px solid #ddd;
+  /* border: 2px solid #ddd; */
   content: " ";
   display: block;
-  height: 12px;
-  left: -4px;
+  height: 30px;
+  left: -9px;
   position: absolute;
-  top: -4px;
-  width: 12px;
+  top: -9px;
+  width: 30px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -o-border-radius: 50%;
@@ -97,10 +84,10 @@ body {
 .wrapper label.control {
   cursor: pointer;
   display: inline-block;
-  height: 8px;
-  margin: 25px 12px 0 16px;
+  height: 16px;
+  margin: 40px 4px 0 24px;
   position: relative;
-  width: 8px;
+  width: 16px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -o-border-radius: 50%;
@@ -109,22 +96,26 @@ body {
   -moz-transition: background ease-in-out 0.5s;
   -o-transition: background ease-in-out 0.5s;
   transition: background ease-in-out 0.5s;
+  border: 2px solid #fff;
 }
 
-.wrapper label.control:hover,
 #slide1:checked ~ .controls label:nth-of-type(1),
 #slide2:checked ~ .controls label:nth-of-type(2),
 #slide3:checked ~ .controls label:nth-of-type(3),
 #slide4:checked ~ .controls label:nth-of-type(4),
 #slide5:checked ~ .controls label:nth-of-type(5) {
-  background: #ddd;
+  background-color: #fff;
+}
+.wrapper label.control:hover {
+  border-color: rgb(134, 7, 7);
+  background-color: #000;
 }
 
 .labels label {
   font-size: 30px;
   font-weight: bold;
   margin: 25px 12px 0 0;
-  background-color: #fff;
+  background-color: #dddddd;
 }
 
 .slides,
@@ -160,4 +151,14 @@ body {
   -moz-transform: scale(1);
   -o-transform: scale(1);
   transform: scale(1);
+}
+
+@media (max-width: 900px) {
+  .labels label {
+    margin-top: 100px;
+  }
+  .wrapper .controls {
+    left: 50%;
+    margin-left: -125px;
+  }
 }
