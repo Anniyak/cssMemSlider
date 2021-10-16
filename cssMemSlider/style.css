@@ -8,8 +8,8 @@
 }
 
 body {
-  background-image: url("assets/images/background.jpg");
-  height: 96vh;
+  background-image: url("assets/images/bcg-my-pictures.jpg");
+  height: 96vmin;
 }
 
 .wrapper {
@@ -66,7 +66,7 @@ body {
   position: absolute;
 }
 
-.wrapper label {
+.wrapper label.control {
   cursor: pointer;
   display: inline-block;
   height: 8px;
@@ -79,7 +79,7 @@ body {
   border-radius: 50%;
 }
 
-.wrapper label:after {
+.wrapper label.control:after {
   border: 2px solid #ddd;
   content: " ";
   display: block;
@@ -94,7 +94,7 @@ body {
   border-radius: 50%;
 }
 
-.wrapper label {
+.wrapper label.control {
   cursor: pointer;
   display: inline-block;
   height: 8px;
@@ -111,7 +111,7 @@ body {
   transition: background ease-in-out 0.5s;
 }
 
-.wrapper label:hover,
+.wrapper label.control:hover,
 #slide1:checked ~ .controls label:nth-of-type(1),
 #slide2:checked ~ .controls label:nth-of-type(2),
 #slide3:checked ~ .controls label:nth-of-type(3),
@@ -120,7 +120,15 @@ body {
   background: #ddd;
 }
 
-.slides {
+.labels label {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 25px 12px 0 0;
+  background-color: #fff;
+}
+
+.slides,
+.labels label {
   height: inherit;
   opacity: 0;
   position: absolute;
@@ -140,7 +148,12 @@ body {
 #slide2:checked ~ .slider > .slide2,
 #slide3:checked ~ .slider > .slide3,
 #slide4:checked ~ .slider > .slide4,
-#slide5:checked ~ .slider > .slide5 {
+#slide5:checked ~ .slider > .slide5,
+#slide1:checked ~ .labels > .label1,
+#slide2:checked ~ .labels > .label2,
+#slide3:checked ~ .labels > .label3,
+#slide4:checked ~ .labels > .label4,
+#slide5:checked ~ .labels > .label5 {
   opacity: 1;
   z-index: 1;
   -webkit-transform: scale(1);
